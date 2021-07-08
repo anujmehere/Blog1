@@ -1,0 +1,35 @@
+{% extends "../base/base.html" %}
+    {% block title %}
+    Welcome to Blog
+    {% endblock %}
+    {% block content %}
+    {% include "base/nav-main.html" %}
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <center>
+    <div class="row mx-auto">
+    
+     {% for cat in category_list %}
+     <div class="d-grid gap-2 col-12 mx-auto" style="justify-content: center;">
+        
+            <a href="/category/{{cat}}"><button class="btn btn-info" type="button" style="min-width: 18rem; margin-bottom: 5px;">{{cat}}</button></a>
+      
+    
+        
+     </div>
+  {% endfor %}
+  </div>
+</center>
+  </div>
+
+  {% endblock %}
