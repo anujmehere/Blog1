@@ -7,15 +7,27 @@
         display: inline-block;
 
     }
+    .search-form input {
+        border: 1px solid #ccc;
+        height: calc(1.7em + .75rem + 1.7px);
+        
+    }
+
+    .search-form input:focus {
+        border-color: #1497ff !important;
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(255, 0, 0, 0.6);
+    }
 </style>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
     <h5 class="my-0 mr-md-auto font-weight-normal"><a class="text-dark" href="/">Future Today</a></h5>
+    <form class="form-inline search-form my-2 my-lg-0" action="/search/" method="get" >
+        <input class="form-controls pl-3 rounded" style="min-width: 18rem;" name="q" type="search" placeholder="Search" aria-label="Search" required>
+        
+    </form>      
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="/">Home</a>
         <a class="p-2 text-dark" href="/account/catlist">Categories</a>
-       
-        
         <a class="p-2 text-dark" href="/account/contact">Support</a>
     </nav>
     {% if request.user.is_authenticated %}
