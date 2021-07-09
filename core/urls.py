@@ -14,3 +14,7 @@ urlpatterns = [
 if settings.DEBUG: #mapping static and media url when debug is enabled
 	urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 	urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "Future Today"
+admin.site.site_title = "Future Today Admin Portal"
+admin.site.index_title = "Welcome to Future Today Solutions"
